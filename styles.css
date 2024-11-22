@@ -13,3 +13,12 @@ body {
   margin: 0 auto;
   width: 90%;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.red-checkbox {
+  accent-color: red;
+}

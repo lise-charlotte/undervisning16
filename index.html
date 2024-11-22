@@ -11,13 +11,80 @@
     <main class="container">
       <h1>HTML Forms</h1>
       <form action="/submit" method="POST">
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Skriv navnet ditt her"
-        />
-      </form>
-    </main>
+        <div class="form-group">
+          <label for="number">Number</label>
+          <input type="number" id="number" name="number"></input>
+        </div>
+        <button id="konverter-btn">Konverter</button>
+        <fieldset>
+          <legend>Personalia</legend>
+            <div class="form-group">
+              <label for="name">Navn</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Skriv navnet ditt her"
+                required
+                />
+            </div>
+            
+            <div class="form-group">
+              <label for="name">Etternavn</label>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Skriv etternavnet ditt her"
+                required
+              />
+          </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="eksempel@gmail.com"
+                />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Hobbyer</legend>
+            <label>
+              <input class="red-checkbox" type="checkbox" name="hobby" value="fiske"/>
+              Fiske
+            </label>
+
+            <label>
+              <input type="checkbox" name="hobby" value="gaming"/>
+              Gaming
+            </label>
+
+            <label>
+              <input type="checkbox" name="hobby" value="koding"/>
+              Koding
+            </label>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="country">Land: </label>
+            <select id="country" name="country">
+              <option value="">Velg ditt land</option>
+              <option value="norway">Norge</option>
+              <option value="sweden">Sverige</option>
+              <option value="denmark">Danmark</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="picture">Last opp bilde: </label>
+            <input type="file" name="picture" id="picture" accept="image/*" />
+          </div>
+          <button id="submit-btn">Send inn!</button>
+        </form>
+      </main>
   </body>
 </html>
